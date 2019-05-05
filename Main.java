@@ -28,13 +28,9 @@ class Main{
 			System.out.print("Input end point: ");
 			f = reader.nextInt();
 			MaxFlow m = new MaxFlow(); 
-			MinFlow n = new MinFlow();
 			MaxFlow.setVer(V);
-			MinFlow.setVer(V);
 			int g[][] = MaxFlow.readgraph();
 			System.out.println("MaxFlow: " +  m.fordFulkerson(g, s, f));
-			System.out.println("MinFlow: ");
-			n.minCut(g, s, f);
 		}
 		else if( M == 2){
 			System.out.print("Input number of vertices: ");
